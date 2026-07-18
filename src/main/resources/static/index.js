@@ -27,7 +27,7 @@ function showUserCard(user) {
   toggleCard.style.backgroundImage = `linear-gradient(135deg, rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.25)), url('${user.picture.large}')`;
   toggleCard.style.backgroundSize = 'cover';
   toggleCard.style.backgroundPosition = 'center';
-  toggleText.innerHTML = `${fullName}<br><span class="user-detail">${gender}</span>`;
+  toggleText.innerHTML = `<div><span class="user-label">Name:</span>${fullName}</div><div><span class="user-label">Gender:</span>${gender}</div>`;
 }
 
 if (toggleCard && toggleText && videoSource && bgVideo) {
