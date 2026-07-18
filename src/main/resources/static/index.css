@@ -10,7 +10,7 @@
 }
 
 :root {
-    --text-fade-duration: 15s;
+    --text-fade-duration: 5s;
     --text-fade-delay: 0s;
     --text-fade-ease: ease;
 }
@@ -43,14 +43,43 @@ body {
     box-sizing: border-box;
 }
 
+.user-toggle {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    z-index: 2;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 999px;
+    padding: 0.8rem 1.1rem;
+    background: rgba(255, 255, 255, 0.12);
+    color: white;
+    cursor: pointer;
+    font-family: 'Dune Rise', system-ui, sans-serif;
+    font-size: 0.9rem;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    transition: transform 0.25s ease, background 0.25s ease, border-color 0.25s ease;
+}
+
+.user-toggle:hover,
+.user-toggle:focus-visible {
+    transform: translateY(-1px);
+    background: rgba(255, 255, 255, 0.18);
+    border-color: rgba(255, 255, 255, 0.35);
+}
+
 .text-card {
-    background: rgba(10, 10, 10, 0.151);
+    position: relative;
+    overflow: hidden;
+    background: rgba(10, 10, 10, 0);
     border: 1px solid rgba(255, 255, 255, 0);
-    border-radius: 1.5rem;
-    padding: 2rem 2.5rem;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;;
+    border-radius: 2rem;
+    padding: 2.5rem 3rem;
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(7px);
+    -webkit-backdrop-filter: blur(7px);
     opacity: 0;
-    max-width: 90vw;
+    max-width: min(90vw, 34rem);
     text-align: center;
     cursor: pointer;
     color: white;
@@ -61,14 +90,44 @@ body {
 
 .text-card:hover,
 .text-card:focus-visible {
-    background: rgba(255, 255, 255, 0.08);
-    transform: translateY(-2px);
-    border-color: rgba(255, 255, 255, 0.45);
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(2px);
+    border-color: rgba(255, 255, 255, 0);
+    box-shadow: 0 10px 24px rgba(255, 0, 0, 0.24);
+    color: #ff0000ac;
 }
 
-.text-card:focus-visible {
-    outline: 3px solid rgba(255, 255, 255, 0.5);
-    outline-offset: 4px;
+.text-card.user-card {
+    background-color: rgba(10, 10, 10, 0.2);
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 2rem 2.5rem;
+    border-radius: 1.5rem;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+}
+
+.text-card.user-card::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.15));
+    pointer-events: none;
+}
+
+#toggle-text {
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+}
+
+.user-detail {
+    display: block;
+    margin-top: 0.35rem;
+    font-size: 0.8em;
+    opacity: 0.9;
 }
 
 .text-card.fade-in {
@@ -97,7 +156,7 @@ body {
     align-items: center;
     justify-content: center;
     gap: 1.2rem;
-    padding: 0.9rem 1.4rem;
+    padding: 1.5rem 2.9rem;
     border: 1px solid rgba(255, 255, 255, 0.103);
     border-radius: 999px;
     background: rgba(255, 255, 255, 0);
@@ -107,7 +166,7 @@ body {
 
 .navbar a {
     position: relative;
-    padding: 0.5rem 0.9rem;
+    padding: 0.9rem 0.9rem;
     text-decoration: none;
     color: white;
     font-size: 0.95rem;
@@ -130,10 +189,10 @@ body {
 
 .navbar a:hover,
 .navbar a:focus-visible {
-    color: #ff7300;
+    color: #ff0000ac;
     transform: translateY(-1px);
-    box-shadow: 0 10px 24px rgba(255, 255, 255, 0.18);
-    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 10px 24px rgba(255, 0, 0, 0.252);
+    background: rgba(0, 0, 0, 0.073);
 }
 
 .navbar a:hover::before,
