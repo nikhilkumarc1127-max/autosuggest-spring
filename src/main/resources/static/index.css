@@ -100,16 +100,16 @@ body {
 }
 
 .text-card.user-card {
-    background-color: rgba(10, 10, 10, 0.2);
+    background-color: transparent;
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
     color: white;
-    padding: 2.5rem 3.25rem;
+    padding: 4.5rem 3.25rem;
     border-radius: 1.5rem;
     backdrop-filter: none;
     -webkit-backdrop-filter: none;
-    background-repeat: no-repeat;
-    background-origin: content-box;
+    text-align: left;
 }
 
 .text-card.user-card::after {
@@ -117,7 +117,7 @@ body {
     position: absolute;
     inset: 0;
     border-radius: inherit;
-    background: linear-gradient(135deg, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.15));
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.05));
     pointer-events: none;
 }
 
