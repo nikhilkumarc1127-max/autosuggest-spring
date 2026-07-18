@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Autosuggest</title>
+  <style>
+    body{
+        text-align: center;
+        margin: 0;
+        background-color: rgb(255, 254, 254);
+    }
+    .gear{
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            font-size: 24px;
+            cursor: pointer;
+        }
+    .status{
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            font-size: 16px;
+        }
+    .logo{  
+            font-size: 60px;
+            margin-top: 300px;
+            color 
+        }
+    .para{
+        color: gray;
+    }
+    .logo1{
+        color:blueviolet;
+    }
+    .inp{
+        padding: 12px;
+        padding-left: 40px;
+        padding-right: 40px;
+        border-radius: 999px;
+        width: 450px;
+        height: 40px;
+        text-align: center;
+        font-size: 20px;
+        border: 0.5px solid;
+
+
+    }
+    .lens{
+        position: relative;
+        left: 60px;
+        font-size: 30px;
+    }
+    .search_suggestions{
+        width: 700px;
+        margin: 15px 0 0;
+        border-radius: 16px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+        overflow: hidden;
+        text-align: left;
+        margin: 0px auto;
+    }
+    .suggestion{
+        padding: 10px 20px;
+        border-bottom: 1px solid #f2f2f2;
+        font-size: 14px;
+    }
+
+
+    
+  </style>
+</head>
+<body>
+    <span class="gear">&#x2699;</span>
+    <span class="status">&#x2022; online | &#x1F552; - ms</span>
+    <h1 class="logo" >
+        <span class="logo1">Being</span>
+        <span class="logo2">infinity</span>
+    </h1>
+    <p class="para">One million phrases. Four algorithms. Prefix based autosuggest.</p>
+    <span class="lens">&#128269;</span>
+    <input class="inp" type="text" placeholder="Start Typing to search phrases...">
+    <div class="search_suggestions">
+        <div class="suggestion">Data Science</div>
+        <div class="suggestion">Cyber Security</div>
+        <div class="suggestion">Artificial Intelligence and Data Science</div>
+        <div class="suggestion">Internet of Things</div>
+    </div>
+    <script>
+        var sear
+    </script>
+
+</body>
+</html>
