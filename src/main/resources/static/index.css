@@ -79,13 +79,15 @@ body {
     backdrop-filter: blur(7px);
     -webkit-backdrop-filter: blur(7px);
     opacity: 0;
-    max-width: min(90vw, 34rem);
+    max-width: min(90vw, 48rem);
+    min-width: 24rem;
     text-align: center;
     cursor: pointer;
     color: white;
     font-family: 'Dune Rise', system-ui, sans-serif;
     transition: transform 0.25s ease, background 0.25s ease, border-color 0.25s ease;
     font-size: clamp(1.5rem, 3vw, 2.5rem);
+    white-space: nowrap;
 }
 
 .text-card:hover,
@@ -102,10 +104,12 @@ body {
     background-size: cover;
     background-position: center;
     color: white;
-    padding: 2rem 2.5rem;
+    padding: 2.5rem 3.25rem;
     border-radius: 1.5rem;
     backdrop-filter: none;
     -webkit-backdrop-filter: none;
+    background-repeat: no-repeat;
+    background-origin: content-box;
 }
 
 .text-card.user-card::after {
@@ -120,14 +124,25 @@ body {
 #toggle-text {
     position: relative;
     z-index: 1;
-    display: inline-block;
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    align-items: flex-start;
+    white-space: nowrap;
 }
 
 .user-detail {
     display: block;
-    margin-top: 0.35rem;
-    font-size: 0.8em;
-    opacity: 0.9;
+    font-size: 0.72em;
+    opacity: 0.95;
+}
+
+.user-label {
+    display: inline-block;
+    margin-right: 0.45rem;
+    font-weight: 700;
+    opacity: 0.95;
+    font-size: 0.72em;
 }
 
 .text-card.fade-in {
